@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "FinanceFlow Frontend - React + TypeScript + Vite",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
