@@ -11,11 +11,12 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 **Suivez vos dépenses · Gérez votre budget · Comprenez où va votre argent**
 
-[Démo](#) · [Signaler un bug](issues) · [Proposer une feature](issues)
+Démo publique : lien à ajouter après déploiement.
+
+[Signaler un bug](https://github.com/seiff-23/FinanceFlow/issues) · [Proposer une feature](https://github.com/seiff-23/FinanceFlow/issues)
 
 </div>
 
@@ -62,7 +63,7 @@ express-validator           react-hot-toast (notifications)
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/seifmechkene/FinanceFlow.git
+git clone https://github.com/seiff-23/FinanceFlow.git
 cd FinanceFlow
 ```
 
@@ -255,14 +256,14 @@ app.get('*', (req, res) => {
 
 **Seif Eddine Mechkene** — Développeur Full-Stack
 
-[![GitHub](https://img.shields.io/badge/GitHub-seifmechkene-181717?style=flat-square&logo=github)](https://github.com/seifmechkene)
+[![GitHub](https://img.shields.io/badge/GitHub-seiff--23-181717?style=flat-square&logo=github)](https://github.com/seiff-23)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Seif%20Eddine-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/seifmechkene)
 
 ---
 
 ## 📄 Licence
 
-Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+La licence annoncée pour ce projet est **MIT**. Le fichier LICENSE reste à ajouter au dépôt.
 
 ---
 
