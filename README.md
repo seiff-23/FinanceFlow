@@ -1,5 +1,7 @@
 # 💸 FinanceFlow — Personal Finance Tracker
 
+[![Project checks](https://github.com/seiff-23/FinanceFlow/actions/workflows/checks.yml/badge.svg)](https://github.com/seiff-23/FinanceFlow/actions/workflows/checks.yml)
+
 <div align="center">
 
 ![FinanceFlow Banner](https://img.shields.io/badge/FinanceFlow-Personal%20Finance%20Tracker-16a34a?style=for-the-badge&logo=trending-up)
@@ -251,6 +253,17 @@ app.get('*', (req, res) => {
 **Revenus** : Salaire · Freelance · Cadeau · Investissement · Autre
 
 ---
+
+## Vérification
+
+```bash
+npm ci --prefix backend
+npm test --prefix backend
+npm ci --prefix frontend
+npm run build --prefix frontend
+```
+
+GitHub Actions exécute les tests de régression du backend et la compilation du frontend sur les pushes et les pull requests. Les tests des contrôleurs utilisent une base simulée et vérifient les limites de mois et d'année ainsi que les totaux du dashboard. Ils ne nécessitent ni MongoDB ni identifiants de production ; ce ne sont pas des tests de bout en bout.
 
 ## 👤 Auteur
 

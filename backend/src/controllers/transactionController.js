@@ -8,12 +8,12 @@ const getTransactions = async (req, res) => {
 
     if (month && year) {
       const start = new Date(Number(year), Number(month) - 1, 1);
-      const end = new Date(Number(year), Number(month), 0, 23, 59, 59);
-      filter.date = { $gte: start, $lte: end };
+      const end = new Date(Number(year), Number(month), 1);
+      filter.date = { $gte: start, $lt: end };
     } else if (year) {
       const start = new Date(Number(year), 0, 1);
-      const end = new Date(Number(year), 11, 31, 23, 59, 59);
-      filter.date = { $gte: start, $lte: end };
+      const end = new Date(Number(year) + 1, 0, 1);
+      filter.date = { $gte: start, $lt: end };
     }
 
     if (search) {
@@ -35,12 +35,12 @@ const getStats = async (req, res) => {
     const currentYear = now.getFullYear();
 
     const startOfMonth = new Date(currentYear, currentMonth - 1, 1);
-    const endOfMonth = new Date(currentYear, currentMonth, 0, 23, 59, 59);
+    const endOfMonth = new Date(currentYear, currentMonth, 1);
 
     // Stats du mois courant
     const monthTransactions = await Transaction.find({
       user: req.user._id,
-      date: { $gte: startOfMonth, $lte: endOfMonth },
+      date: { $gte: startOfMonth, $lt: endOfMonth },
     });
 
     let monthIncome = 0;
@@ -61,11 +61,11 @@ const getStats = async (req, res) => {
     for (let i = 5; i >= 0; i--) {
       const d = new Date(currentYear, currentMonth - 1 - i, 1);
       const mStart = new Date(d.getFullYear(), d.getMonth(), 1);
-      const mEnd = new Date(d.getFullYear(), d.getMonth() + 1, 0, 23, 59, 59);
+      const mEnd = new Date(d.getFullYear(), d.getMonth() + 1, 1);
 
       const mTransactions = await Transaction.find({
         user: req.user._id,
-        date: { $gte: mStart, $lte: mEnd },
+        date: { $gte: mStart, $lt: mEnd },
       });
 
       let mIncome = 0;
